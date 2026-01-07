@@ -63,8 +63,13 @@ class ACE_TacticalLadderEntity : GenericEntity
 	//------------------------------------------------------------------------------------------------
 	protected void OnParentSlotChanged(InventoryStorageSlot oldSlot, InventoryStorageSlot newSlot)
 	{
+		// Placed on ground
+		if (!newSlot)
+		{
+			GetGame().GetCallqueue().CallLater(OnItemPlacedOnGroundDelayed, 100);
+		}
 		// Picked up from ground
-		if (!oldSlot)
+		else if (!oldSlot)
 		{
 			RpcDo_OnItemPickedFromGroundBroadcast();
 			Rpc(RpcDo_OnItemPickedFromGroundBroadcast);
@@ -72,18 +77,24 @@ class ACE_TacticalLadderEntity : GenericEntity
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	protected void RpcDo_OnItemDroppedOnGround()
+	//! Workaround: Replace instance, since procedural animation gets broken when placing the ladder
+	protected void OnItemPlacedOnGroundDelayed()
 	{
-		vector transform[4];
-		GetWorldTransform(transform);
+		EntitySpawnParams params = new EntitySpawnParams();
+		params.TransformMode = ETransformMode.WORLD;
+		GetWorldTransform(params.Transform);
+		
+		// Enforce vertical placement
+		Math3D.AnglesToMatrix(Vector(params.Transform[2].ToYaw(), 0, 0), params.Transform);
 		TraceParam traceParams = new TraceParam();
 		traceParams.Exclude = this;
 		traceParams.TargetLayers = EPhysicsLayerPresets.Building;
-		SCR_TerrainHelper.SnapToTerrain(transform, GetWorld(), false, traceParams);
-		SetWorldTransform(transform);
-	}
+		SCR_TerrainHelper.SnapToTerrain(params.Transform, GetWorld(), false, traceParams);
 		
+		GetGame().SpawnEntityPrefab(Resource.Load(GetPrefabData().GetPrefabName()), GetWorld(), params);
+		SCR_EntityHelper.DeleteEntityAndChildren(this);
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	//! Retract ladder when picking up from ground
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
@@ -92,24 +103,6 @@ class ACE_TacticalLadderEntity : GenericEntity
 		// Retract ladder
 		m_pSignalsManager.SetSignalValue(m_iExtendSignalID, 0);
 		UpdateScriptedLocal();
-		
-		ActionsManagerComponent actionsManager = ActionsManagerComponent.Cast(FindComponent(ActionsManagerComponent));
-		if (!actionsManager)
-			return;
-		
-		array<BaseUserAction> actions = {};
-		actionsManager.GetActionsList(actions);
-		
-		foreach (BaseUserAction action : actions)
-		{
-			ACE_TacticalLadder_ExtendLadderAction extendAction = ACE_TacticalLadder_ExtendLadderAction.Cast(action);
-			if (extendAction)
-			{
-				// Reset target value
-				extendAction.Init(this, actionsManager);
-				break;
-			}
-		}
 	}
 	
 	//------------------------------------------------------------------------------------------------
