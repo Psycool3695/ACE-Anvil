@@ -24,9 +24,10 @@ StringTable {
    Id "ACE-ControlsHint_InspectTurret"
    Target_en_us "Inspect Turret"
    Target_de_de "Geschütz untersuchen"
+   Target_ko_kr "포탑 조사하기"
    Modified 1715082397
    Author "Kexanone"
-   LastChanged "Kexanone"
+   LastChanged "Psycool"
   }
   CustomStringTableItem "{64771570B1AFAB10}" {
    Id "ACE-Emotes_Emote_Pushups_Name"
