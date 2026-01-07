@@ -95,7 +95,7 @@ StringTable {
    Target_ko_kr "무전기 순환음"
    Modified 1725493711
    Author "veteran29"
-   LastChanged "YuanYu"
+   LastChanged "Psycool"
   }
   CustomStringTableItem "{664EB3C5389562D0}" {
    Id "ACE_Radio-Settings_Click_Off"

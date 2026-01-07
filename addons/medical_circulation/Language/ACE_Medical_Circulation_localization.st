@@ -135,7 +135,7 @@ StringTable {
    Target_ko_kr "똑바로 눕혀지지 않음"
    Modified 1730199717
    Author "Kexanone"
-   LastChanged "Kexanone"
+   LastChanged "Psycool"
   }
   CustomStringTableItem "{6228B55BAA8F501D}" {
    Id "ACE_Medical-InfoWidget_AmmoniumCarbonate"
