@@ -4,6 +4,7 @@ StringTable {
   CustomStringTableItem "{5DDEFB516A0DA608}" {
    Id "ACE_Carrying-AddonName"
    Target_en_us "ACE - Carrying"
+   Target_ko_kr "ACE - 운반"
    Modified 1578023399
    Author "kexanone"
    LastChanged "kexanone"
@@ -14,6 +15,7 @@ StringTable {
    Target_fr_fr "Porter"
    Target_de_de "Tragen"
    Target_cs_cz "Nést"
+   Target_ko_kr "업기"
    Modified 1574895272
    Author "kexanone"
    LastChanged "apollo-jk"
@@ -24,6 +26,7 @@ StringTable {
    Target_fr_fr "Porter"
    Target_de_de "Am Tragen"
    Target_cs_cz "Nošení"
+   Target_ko_kr "운반하기"
    Modified 1577870149
    Author "kexanone"
    LastChanged "apollo-jk"
@@ -32,6 +35,7 @@ StringTable {
    Id "ACE_Carrying-UserAction_LoadCasualty"
    Target_en_us "Load casualty:"
    Target_de_de "Kampfunfähigen laden:"
+   Target_ko_kr "사상자 싣기:"
    Modified 1649232163
    Author "Kexanone"
    LastChanged "Kexanone"
@@ -42,6 +46,7 @@ StringTable {
    Target_fr_fr "Déposer"
    Target_de_de "Ablegen"
    Target_cs_cz "Položit"
+   Target_ko_kr "놓기"
    Modified 1578028452
    Author "kexanone"
    LastChanged "apollo-jk"
