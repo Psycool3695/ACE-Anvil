@@ -4,7 +4,7 @@ class ACE_TacticalLadder_ExtendLadderAction : SCR_AdjustSignalAction
 	protected ACE_TacticalLadderEntity m_pOwner;
 	
 	//------------------------------------------------------------------------------------------------
-	override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
+	protected override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
 	{
 		super.Init(pOwnerEntity, pManagerComponent);
 		m_pOwner = ACE_TacticalLadderEntity.Cast(pOwnerEntity);
