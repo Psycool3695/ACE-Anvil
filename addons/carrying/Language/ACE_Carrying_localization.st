@@ -7,7 +7,7 @@ StringTable {
    Target_ko_kr "ACE - 운반"
    Modified 1578023399
    Author "kexanone"
-   LastChanged "kexanone"
+   LastChanged "Psycool"
   }
   CustomStringTableItem "{5DDEFB51C773DDD9}" {
    Id "ACE_Carrying-UserAction_Carry"
@@ -18,7 +18,7 @@ StringTable {
    Target_ko_kr "업기"
    Modified 1574895272
    Author "kexanone"
-   LastChanged "apollo-jk"
+   LastChanged "Psycool"
   }
   CustomStringTableItem "{5E0C2A71118B03B7}" {
    Id "ACE_Carrying-UserAction_Carrying"
@@ -29,7 +29,7 @@ StringTable {
    Target_ko_kr "운반하기"
    Modified 1577870149
    Author "kexanone"
-   LastChanged "apollo-jk"
+   LastChanged "Psycool"
   }
   CustomStringTableItem "{624D268660B46CAB}" {
    Id "ACE_Carrying-UserAction_LoadCasualty"
@@ -38,7 +38,7 @@ StringTable {
    Target_ko_kr "사상자 싣기:"
    Modified 1649232163
    Author "Kexanone"
-   LastChanged "Kexanone"
+   LastChanged "Psycool"
   }
   CustomStringTableItem "{5E0EB8A9BCC4201E}" {
    Id "ACE_Carrying-UserAction_Release"
@@ -49,7 +49,7 @@ StringTable {
    Target_ko_kr "놓기"
    Modified 1578028452
    Author "kexanone"
-   LastChanged "apollo-jk"
+   LastChanged "Psycool"
   }
  }
 }
