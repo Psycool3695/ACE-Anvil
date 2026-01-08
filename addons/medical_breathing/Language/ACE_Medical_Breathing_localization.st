@@ -128,11 +128,11 @@ StringTable {
    LastChanged "Psycool"
   }
   CustomStringTableItem "{671D563325641152}" {
-   Id "ACE_Medical-Pneumothorax"
-   Target_en_us "Pneumothorax"
-   Target_de_de "Pneumothorax"
+   Id "ACE_Medical-OpenPneumothorax"
+   Target_en_us "Open pneumothorax"
+   Target_de_de "Offener Pneumothorax"
    Target_ko_kr "기흉"
-   Modified 1729978799
+   Modified 1730352105
    Author "Kexanone"
    LastChanged "Psycool"
   }
