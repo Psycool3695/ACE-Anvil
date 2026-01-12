@@ -132,6 +132,7 @@ StringTable {
    Id "ACE_Medical-FailReason_NotOnBack"
    Target_en_us "Not on back"
    Target_de_de "Nicht auf dem Rücken"
+   Target_zh_cn "非仰躺"
    Target_ko_kr "똑바로 눕혀지지 않음"
    Modified 1730199717
    Author "Kexanone"
@@ -221,7 +222,7 @@ StringTable {
    Target_de_de "Ammoniumcarbonat"
    Target_ru_ru "Карбонат аммония"
    Target_pt_br "Carbonato de Amônio"
-   Target_zh_cn "碳酸銨 (嗅鹽)"
+   Target_zh_cn "碳酸铵 (嗅鹽)"
    Target_uk_ua "Амонію карбонат (нюхальна сіль)"
    Target_ko_kr "탄산암모늄"
    Modified 1722592801
