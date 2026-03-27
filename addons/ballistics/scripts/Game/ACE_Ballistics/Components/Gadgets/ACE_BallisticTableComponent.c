@@ -52,7 +52,7 @@ class ACE_BallisticTableComponent : SCR_BallisticTableComponent
 	//------------------------------------------------------------------------------------------------
 	protected override void ModeSwitch(EGadgetMode mode, IEntity charOwner)
 	{
-		if (mode == EGadgetMode.IN_HAND)
+		if (mode == EGadgetMode.IN_HAND && charOwner == SCR_PlayerController.GetLocalControlledEntity())
 		{
 			ACE_BallisticTableComponentClass data = ACE_BallisticTableComponentClass.Cast(GetComponentData(GetOwner()));
 			if (data)
@@ -63,5 +63,26 @@ class ACE_BallisticTableComponent : SCR_BallisticTableComponent
 		}
 
 		super.ModeSwitch(mode, charOwner);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Disable broadcasting of pages
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	override void RpcDo_SyncPageChange(int selectedPage)
+	{
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Disable broadcasting of pages
+	override bool RplSave(ScriptBitWriter writer)
+	{
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Disable broadcasting of pages
+	override bool RplLoad(ScriptBitReader reader)
+	{
+		return true;
 	}
 }
