@@ -1,7 +1,7 @@
 GameProject {
- ID "ACE_BallisticsPrototype"
+ ID "ACE_Ballistics"
  GUID "646E06BB853A7778"
- TITLE "ACE Ballistics Prototype"
+ TITLE "ACE Ballistics"
  Dependencies {
   "58D0FB3206B6F859" "60C4CE4888FF4621"
  }
