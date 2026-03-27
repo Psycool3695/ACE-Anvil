@@ -8,6 +8,10 @@ GameEntity : "{35D7F1189BE00E94}Prefabs/Items/Equipment/BallisticTable/Ballistic
   }
   ActionsManagerComponent "{508AB5952B584B2E}" {
    additionalActions {
+    ACE_Ballistics_ChangePageAction "{60CE81CBD818F194}" {
+    }
+    ACE_Ballistics_ChangePageAction "{60CE81CBDFE69B53}" {
+    }
     ACE_NoUserAction "{6304F6F3DBC43D4B}" {
     }
     ACE_NoUserAction "{6304F6F3DE4511D0}" {
