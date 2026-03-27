@@ -26,8 +26,6 @@ class ACE_BulletTools
 	//! Return all bullet resource names of a magazine
 	static array<ResourceName> GetResourceNamesFromMagazine(ResourceName magazinePrefabName)
 	{
-		array<ResourceName> ammoNames = {};
-		
 		Resource magazineRes = Resource.Load(magazinePrefabName);
 		if (!magazineRes.IsValid())
 			return null;
@@ -51,6 +49,7 @@ class ACE_BulletTools
 		if (!ammonConfigSrc)
 			return null;
 		
+		array<ResourceName> ammoNames = {};
 		ammonConfigSrc.Get("AmmoResourceArray", ammoNames);
 		return ammoNames;
 	}
