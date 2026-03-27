@@ -25,7 +25,7 @@ class ACE_VisualisedBallisticConfig : SCR_VisualisedBallisticConfig
 			return true;
 		
 		float initialSpeed = ACE_BulletTools.GetInitialSpeed(m_sProjectilePrefab);
-		IEntity dummy = GetGame().SpawnEntityPrefab(Resource.Load(m_sProjectilePrefab), GetGame().GetWorld());
+		IEntity dummy = GetGame().SpawnEntityPrefabLocal(Resource.Load(m_sProjectilePrefab), GetGame().GetWorld());
 		ProjectileMoveComponent moveComponent = ProjectileMoveComponent.Cast(dummy.FindComponent(ProjectileMoveComponent));
 
 		array<ref array<float>> ballisticValues = {};
