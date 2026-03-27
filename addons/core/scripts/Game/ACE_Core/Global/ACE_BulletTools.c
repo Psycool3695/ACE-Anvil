@@ -6,6 +6,14 @@ class ACE_BulletTools
 	static array<ResourceName> GetDefaultResourceNamesFromMuzzle(BaseMuzzleComponent muzzle)
 	{
 		ResourceName magazineOrProjectilePrefabName = muzzle.GetDefaultMagazineOrProjectileName();
+		if (magazineOrProjectilePrefabName.IsEmpty())
+		{
+			BaseMagazineComponent magazine = muzzle.GetMagazine();
+			if (!magazine)
+				return {};
+			
+			magazineOrProjectilePrefabName = magazine.GetOwner().GetPrefabData().GetPrefabName();
+		}
 		
 		array<ResourceName> bulletPrefabNames = GetResourceNamesFromMagazine(magazineOrProjectilePrefabName);
 		if (bulletPrefabNames)
