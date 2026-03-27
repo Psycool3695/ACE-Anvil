@@ -15,7 +15,6 @@ class ACE_VisualisedBallisticConfig : SCR_VisualisedBallisticConfig
 		m_iMaxRange = 1500;
 		m_iElevationChangeDownRange = 50;
 		m_fStandardDispersion = 100;
-		m_sAmmoTypeQuadName = "ammotype-fmj";
 	}
 	
 	//------------------------------------------------------------------------------------------------
