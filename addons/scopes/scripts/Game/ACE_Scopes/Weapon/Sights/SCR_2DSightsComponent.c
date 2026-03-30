@@ -85,6 +85,10 @@ modded class SCR_2DOpticsComponent : ScriptedSightsComponent
 		transform[3] = GetOwner().GetLocalTransformAxis(3);
 		GetOwner().SetLocalTransform(transform);
 		
+		SCR_WeaponInfo display = ACE_GetWeaponInfoDisplay();
+		if (display)
+			display.ACE_UpdateZeroingIndicator();
+		
 		SCR_UISoundEntity.SoundEvent("ACE_SCOPES_SOUND_CLICK");
 	}
 	
@@ -101,6 +105,29 @@ modded class SCR_2DOpticsComponent : ScriptedSightsComponent
 		SCR_2DOpticsComponentClass data = SCR_2DOpticsComponentClass.Cast(GetComponentData(GetOwner()));
 		if (data)
 			vertical /= data.ACE_GetEffectiveVerticalZeroingScale();
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	protected SCR_WeaponInfo ACE_GetWeaponInfoDisplay()
+	{
+		SCR_ChimeraCharacter player = SCR_ChimeraCharacter.Cast(SCR_PlayerController.GetLocalControlledEntity());
+		if (!player)
+			return null;
+		
+		SCR_BaseHUDComponent hudComponent = SCR_BaseHUDComponent.Cast(player.FindComponent(SCR_BaseHUDComponent));
+		if (!hudComponent)
+			return null;
+		
+		array<BaseInfoDisplay> displayInfos = {};
+		int count = hudComponent.GetInfoDisplays(displayInfos);
+		for (int i = 0; i < count; i++)
+		{
+			SCR_WeaponInfo current = SCR_WeaponInfo.Cast(displayInfos[i]);
+			if (current)
+				return current;
+		}
+		
+		return null;
 	}
 	
 	//------------------------------------------------------------------------------------------------
