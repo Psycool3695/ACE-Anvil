@@ -109,10 +109,10 @@ StringTable {
    Id "ACE-UserAction_LoadCarried"
    Target_en_us "Load carried:"
    Target_de_de "Getragener laden:"
-   Target_ko_kr "부상자 싣기:"
+   Target_ko_kr "업힌 사람 싣기:"
    Modified 1689127000
    Author "Kex"
-   LastChanged "Kex"
+   LastChanged "Psycool"
   }
   CustomStringTableItem "{649D4AEF943234F2}" {
    Id "ACE-UserAction_Release"
