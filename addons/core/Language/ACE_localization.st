@@ -24,6 +24,7 @@ StringTable {
    Id "ACE-Emotes_Emote_Pushups_Name"
    Target_en_us "Push-ups"
    Target_de_de "Liegestützen"
+   Target_ko_kr "팔굽혀펴기"
    Modified 1685539176
    Author "Kex"
    LastChanged "Kex"
@@ -32,6 +33,7 @@ StringTable {
    Id "ACE-Emotes_Emote_Salute_Name"
    Target_en_us "Salute"
    Target_de_de "Salutieren"
+   Target_ko_kr "경례하기"
    Modified 1685538873
    Author "Kex"
    LastChanged "Kex"
@@ -40,6 +42,7 @@ StringTable {
    Id "ACE-Emotes_Emote_SitOnFloor_Name"
    Target_en_us "Sit on the floor"
    Target_de_de "Auf den Boden sitzen"
+   Target_ko_kr "바닥에 앉기"
    Modified 1685538829
    Author "Kex"
    LastChanged "Kex"
@@ -52,6 +55,7 @@ StringTable {
    Target_cs_cz "Zdravá dávka draslíku!"
    Target_ru_ru "Здоровый калий!"
    Target_uk_ua "Здоровий калій!"
+   Target_ko_kr "건강한 칼륨덩어리입니다!"
    Modified 1655483874
    Author "kexanone"
    LastChanged "Smith"
@@ -64,6 +68,7 @@ StringTable {
    Target_cs_cz "Banán"
    Target_ru_ru "Банан"
    Target_uk_ua "Банан"
+   Target_ko_kr "바나나"
    Modified 1655483813
    Author "kexanone"
    LastChanged "Smith"
@@ -95,6 +100,7 @@ StringTable {
    Target_cs_cz "Nošení"
    Target_ru_ru "Перенос"
    Target_uk_ua "Перенесення"
+   Target_ko_kr "업는 중"
    Modified 1655483287
    Author "kexanone"
    LastChanged "Smith"
@@ -103,6 +109,7 @@ StringTable {
    Id "ACE-UserAction_LoadCarried"
    Target_en_us "Load carried:"
    Target_de_de "Getragener laden:"
+   Target_ko_kr "부상자 싣기:"
    Modified 1689127000
    Author "Kex"
    LastChanged "Kex"
@@ -134,6 +141,7 @@ StringTable {
    Target_cs_cz "Výbušná dávka draslíku!"
    Target_ru_ru "Взрывной калий!"
    Target_uk_ua "Вибуховий калій!"
+   Target_ko_kr "폭발하는 칼륨덩어리입니다!"
    Modified 1655483802
    Author "kexanone"
    LastChanged "Smith"
@@ -146,6 +154,7 @@ StringTable {
    Target_cs_cz "Výbušný banán"
    Target_ru_ru "Осколочный банан"
    Target_uk_ua "Осколковий банан"
+   Target_ko_kr "세열바나나"
    Modified 1655483765
    Author "kexanone"
    LastChanged "Smith"
@@ -153,6 +162,7 @@ StringTable {
   CustomStringTableItem "{649D4AEE400FD73C}" {
    Id "ACE_Core-AddonName"
    Target_en_us "Core"
+   Target_ko_kr "코어"
    Modified 1688030694
    Author "Kex"
    LastChanged "Kex"
